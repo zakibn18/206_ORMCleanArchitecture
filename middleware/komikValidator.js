@@ -30,15 +30,35 @@ function validatebody(schema) {
     if (error) {
       return errorResponse(
         res,
-        'Validasi Input Gagal',
+        "Validasi Input Gagal",
         400,
         error.details.map((item) => ({
-          field: item.path.join('.'),
+          field: item.path.join("."),
           message: item.message,
         }))
       );
     }
     req.validatedBody = value;
+    next();
+  };
+}
+
+function validateParams(schema) {
+  return (req, res, next) => {
+    const { error, value } = schema.validate(req.params);
+
+    if (error) {
+      return errorResponse(
+        res,
+        "Parameter tidak valid",
+        400,
+        error.details.map((item) => ({
+          field: item.path.join("."),
+          message: item.message,
+        }))
+      );
+    }
+    req.validatedParams = value;
     next();
   };
 }
