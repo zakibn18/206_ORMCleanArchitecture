@@ -58,7 +58,7 @@ function validateParams(schema) {
         }))
       );
     }
-    req.validatedParams = value;
+    req.params = value;
     next();
   };
 }
