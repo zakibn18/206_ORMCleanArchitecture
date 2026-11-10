@@ -15,3 +15,7 @@
 # DELETE
 
 <img width="1917" height="1078" alt="Screenshot 2026-11-10 112104" src="https://github.com/user-attachments/assets/e19f2392-5bf9-4ce4-b77a-b7fc178ab78d" />
+
+# GET after DELETE
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/7a17a54f-31b9-4330-a176-57ef038bddd9" />
